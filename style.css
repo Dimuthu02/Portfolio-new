@@ -55,7 +55,7 @@ body {
 span {
     background: linear-gradient(
         270deg,
-        #0F8908 10%,
+        #df8908 10%,
         #ff1d15 100%
     );
     background-clip: text;
@@ -74,4 +74,25 @@ span {
 .navbar a:hover {
     color: var(--main-color);
     border-bottom: 3px solid var(--main-color);
+}
+
+.gradient-btn {
+    font-size: 1.8rem;
+    padding: 1rem 2rem;
+    border-radius: 3rem;
+    background: linear-gradient(
+        270deg,
+        #df8908 10%,
+        #ff1d15 100%
+    );
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    color: white;
+    border: none;
+    text-wrap: nowrap;
+}
+
+.gradient-btn:hover {
+    transform: scale(1.05);
 }
