@@ -96,3 +96,27 @@ span {
 .gradient-btn:hover {
     transform: scale(1.05);
 }
+section {
+    min-height: 100vh;
+    padding: 10rem 15%;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15rem;
+}
+
+.home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.home-content h3 {
+    font-size: 8rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+}
