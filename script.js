@@ -386,3 +386,4 @@ window.onscroll = debounce(() => {
 }, 10);
 
 console.log("Portfolio website loaded successfully! ✨");
+
