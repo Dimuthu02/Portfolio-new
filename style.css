@@ -27,7 +27,7 @@ body {
 
 /* SCROLLBAR */
 ::-webkit-scrollbar {
-  width: 15px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -369,7 +369,6 @@ box-shadow: 0 0 25px transparent;
 .heading span {
   color: var(--main-color);
 }
-
 /* ABOUT SECTION */
 .about {
   display: flex;
@@ -377,42 +376,106 @@ box-shadow: 0 0 25px transparent;
   align-items: center;
   gap: 10rem;
   background: var(--second-bg-color);
+
+  animation: fadeUp 1s ease forwards;
 }
 
+/* IMAGE MOTION */
 .about-img img {
-  width: 35vw;
-  max-width: 45rem;
+  width: 32vw;
   border-radius: 50%;
   box-shadow: 0 0 25px var(--main-color);
-  transition: 0.4s ease-in-out;
+
+  animation: floatImage 4s ease-in-out infinite;
+  transition: box-shadow 0.4s ease, transform 0.4s ease;
 }
 
+/* IMAGE HOVER */
 .about-img img:hover {
+  transform: scale(1.05);
   box-shadow: 0 0 25px var(--main-color),
               0 0 50px var(--main-color),
               0 0 100px var(--main-color);
-  transform: scale(1.05);
 }
 
+/* TEXT CONTENT ANIMATION */
+.about-content {
+  animation: fadeRight 1.2s ease forwards;
+}
+
+/* HEADING */
 .about-content h2 {
   font-size: 7rem;
   text-align: left;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .about-content h2 span {
   color: var(--main-color);
 }
 
+/* PARAGRAPH */
 .about-content p {
   font-size: 1.8rem;
-  margin-bottom: 2rem;
   line-height: 1.8;
+  animation: fadeIn 1.5s ease forwards;
 }
 
+/* BUTTON */
 .about-content .btn {
   margin-top: 3rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.about-content .btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 25px var(--main-color);
+}
+
+/* ===================== */
+/* KEYFRAME ANIMATIONS */
+/* ===================== */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes floatImage {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
 
 /* SERVICES SECTION */
 .services {
