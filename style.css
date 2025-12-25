@@ -22,7 +22,7 @@ html {
 body {
   background: var(--bg-color);
   color: var(--text-color);
-  overflow-x: hidden;
+
 }
 
 /* SCROLLBAR */
@@ -45,8 +45,8 @@ body {
   width: 100%;
   top: 0;
   left: 0;
-  padding: 2rem 9%;
-  background: rgba(0, 0, 0, 0.8);
+  padding: 4rem 15%;
+  background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(10px);
   display: flex;
   justify-content: space-between;
